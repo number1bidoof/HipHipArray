@@ -12,7 +12,7 @@ public class ShufflePlaylist {
         return playlist;
     }
     public static void main(String[] args) {
-        String[] playlist = {"Gangnam Style – PSY","I Love You – Barney","Never Gonna Give You Up – Rick Astley", "Shake It Off – Taylor Swift","Baby Shark – Pinkfong","Axel F (Crazy Frog) – Crazy Frog","What Does the Fox Say? – Ylvis"}
+        String[] playlist = {"Gangnam Style – PSY","I Love You – Barney","Never Gonna Give You Up – Rick Astley", "Shake It Off – Taylor Swift","Baby Shark – Pinkfong","Axel F (Crazy Frog) – Crazy Frog","What Does the Fox Say? – Ylvis"};
         String[] playlist1 = shuffle(playlist);
     }
 }
