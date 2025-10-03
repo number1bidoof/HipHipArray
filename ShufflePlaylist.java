@@ -8,11 +8,13 @@ public class ShufflePlaylist {
             playlist[i] = playlist[j];
             playlist[j] = temp;
         }
-        System.out.println(Arrays.toString(playlist));
+        for (String song : playlist){
+            System.out.println(song + " ");
+        }
         return playlist;
     }
     public static void main(String[] args) {
         String[] playlist = {"Gangnam Style – PSY","I Love You – Barney","Never Gonna Give You Up – Rick Astley", "Shake It Off – Taylor Swift","Baby Shark – Pinkfong","Axel F (Crazy Frog) – Crazy Frog","What Does the Fox Say? – Ylvis"};
-        String[] playlist1 = shuffle(playlist);
+        String[] testing = shuffle(playlist);
     }
 }
