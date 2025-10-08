@@ -28,6 +28,7 @@ public class EvenOddSplit {
         }
         return oddNum; // returns the array of odd numbers
     }
+    
     public static int[] formatOutput(int[] nums){ // for readability and better interface
         for(int i : nums){ // for each number in the array
             if(i != 0) { // if it is not 0 (meaning the value didnt get filled in)
@@ -40,7 +41,7 @@ public class EvenOddSplit {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Enter 15 integers with one space between each integer:");
         int[] userList;
         userList = new int[15]; // is a set number
