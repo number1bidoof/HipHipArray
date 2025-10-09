@@ -21,7 +21,7 @@ public class ShufflePlaylist {
         String[] shuffledPlaylist = shuffle(playlist); // shuffles the playlist
 
         for (String song : shuffledPlaylist){ // helps format the output 
-            System.out.println(song + " ");
+            System.out.println((shuffledPlaylist.indexOf(song) + ". " song + " ");
         }
     }
 }
