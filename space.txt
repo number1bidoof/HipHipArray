@@ -1,0 +1,8 @@
+Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number");
+        String[] userput = scanner.nextLine();
+        userput.split(" ")
+        
+        int length = Integer.parseInt(userput);
+        String[] array = new String[length];
+        System.out.println("Created an array of length: " + array.length);
