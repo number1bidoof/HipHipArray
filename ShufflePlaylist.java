@@ -17,11 +17,17 @@ public class ShufflePlaylist {
         return playlist; // returns the shuffled playlist
     }
     public static void main(String[] args) {
-        String[] playlist = {"Gangnam Style – PSY","I Love You – Barney","Never Gonna Give You Up – Rick Astley", "Shake It Off – Taylor Swift","Baby Shark – Pinkfong","Axel F (Crazy Frog) – Crazy Frog","What Does the Fox Say? – Ylvis"};
+        String[] playlist = {"Gangnam Style – PSY",
+        "I Love You – Barney",
+        "Never Gonna Give You Up – Rick Astley",
+        "Shake It Off – Taylor Swift",
+        "Baby Shark – Pinkfong",
+        "Axel F (Crazy Frog) – Crazy Frog",
+        "What Does the Fox Say? – Ylvis"};
         String[] shuffledPlaylist = shuffle(playlist); // shuffles the playlist
 
-        for (String song : shuffledPlaylist){ // helps format the output 
-            System.out.println((shuffledPlaylist.indexOf(song) + ". " song + " ");
+        for (int i = 0; i < shuffledPlaylist.length; i++){ // helps format the output 
+            System.out.println((i + 1) + ". " + shuffledPlaylist[i]+" ");
         }
     }
 }

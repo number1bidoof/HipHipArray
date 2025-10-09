@@ -1,10 +1,10 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class test {
     public static int maxDifference(int... list){
-        int listMax = list[0];
-        int listMin = list[0];
-        return(listMax - listMin);
+        Arrays.sort(list);
+        return list[list.length - 1] - list[0];
         
     }
     public static void main(String[] args) {
@@ -16,6 +16,8 @@ public class test {
         for (int i = 0; i < test.length; i++){
             testing2[i] = Integer.parseInt(test[i]);
         }
-
+        int result = maxDifference(testing2);
+        System.out.println("The maximum difference is... " + result);
+        scanner.close();
     }
 }
