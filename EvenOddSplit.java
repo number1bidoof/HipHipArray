@@ -9,18 +9,32 @@ import java.util.Scanner;
 public class EvenOddSplit {
     public static int[] getEvens(int[] nums) {
         int countEvens = 0; // index value
-        int[] evenNum = new int[nums.length]; // makes an empty list for the even numbers
+        int[] evenNum;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] % 2 == 0){
+                countEvens++;
+            }
+        }
+        evenNum = new int[countEvens]; // defines a new array with the counter, based on # of even numbers
+        countEvens = 0; // flushes index value, could also define a new varrible (reuse warrior)
         for (int number : nums) {
             if (number % 2 == 0) { // if the number is even
                 evenNum[countEvens++] = number; // adds number to the array, increments by one for the next index
             }
         }
-        return evenNum; // returns the array of even number
+        return evenNum; // returns the array of even numbers
     }
 
     public static int[] getOdds(int[] nums) {
         int countOdds = 0; // index value
-        int[] oddNum = new int[nums.length]; // makes an empty list for the odd numbers
+        int[] oddNum;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] % 2 != 0){
+                countOdds++;
+            }
+        }
+        oddNum = new int[countOdds]; // defines a new array with the counter, based on # of odd numbers
+        countOdds = 0;  // flushes index value, could also define a new varrible (reuse warrior)
         for (int number : nums) {
             if (number % 2 != 0) { // if the number is odd
                 oddNum[countOdds++] = number; // adds number to the array, increments by one for the next index
@@ -29,7 +43,7 @@ public class EvenOddSplit {
         return oddNum; // returns the array of odd numbers
     }
     
-    public static int[] formatOutput(int[] nums){ // for readability and better interface
+     public static int[] formatOutput(int[] nums){ // for readability and better reusability
         for(int i : nums){ // for each number in the array
             if(i != 0) { // if it is not 0 (meaning the value didnt get filled in)
             System.out.print(i + " ");  // prints it out
@@ -37,12 +51,12 @@ public class EvenOddSplit {
         }
         System.out.println(" ");
         return nums; // returns the array
-    }
+     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter 15 integers with one space between each integer:");
+        System.out.println("Enter 15 integers with one space between each integer: ");
         int[] userList;
         userList = new int[15]; // is a set number
         for (int i = 0; i < userList.length; i++) { 
